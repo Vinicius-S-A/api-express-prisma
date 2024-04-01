@@ -1,6 +1,8 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// npx prisma migrate dev
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,8 +12,10 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model ClasseSQL {
+model user {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
 }
+
+
