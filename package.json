@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/Vinicius-S-A/api-express-prisma#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "@prisma/client": "^5.11.0",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "prisma": "^5.11.0",
     "typescript": "^5.4.3"
   }
 }
