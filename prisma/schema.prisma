@@ -1,7 +1,7 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// npx prisma migrate dev
+// PARA GERAR UMA MIGRATION -> npx prisma migrate dev 
 
 generator client {
   provider = "prisma-client-js"
@@ -13,9 +13,16 @@ datasource db {
 }
 
 model user {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id           Int     @id @default(autoincrement())
+  email        String  @unique
+  name         String?
+  display_name String?
+  password     String?
+  banned       Boolean
 }
 
-
+// model message {
+//   id      Int    @id @default(autoincrement())
+//   message String
+//   user_id Int
+// }

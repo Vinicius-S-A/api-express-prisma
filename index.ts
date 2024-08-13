@@ -1,3 +1,4 @@
+import { PrismaClient } from '@prisma/client';
 import express from 'express';
 import router from './app/routes';
 
@@ -7,3 +8,6 @@ app.use(router);
 app.listen(3000, () => {
     console.log("servidor iniciado na porta 3000");
 });
+
+const prismaConnection = new PrismaClient();
+export default prismaConnection;
