@@ -21,8 +21,44 @@ model user {
   banned       Boolean
 }
 
-// model message {
-//   id      Int    @id @default(autoincrement())
-//   message String
-//   user_id Int
-// }
+model message {
+  id         Int      @id @default(autoincrement())
+  message    String
+  user_id    Int
+  channel_id Int
+  date       DateTime
+  deleted    Boolean
+}
+
+model friendship { // DELETAVEL
+  id       Int      @id @default(autoincrement())
+  user_id1 Int
+  user_id2 Int
+  date     DateTime
+}
+
+model friend_requests { // DELETAVEL
+  id       Int      @id @default(autoincrement())
+  user_id1 Int
+  user_id2 Int
+  date     DateTime
+}
+
+model blocked_users { // DELETAVEL
+  id       Int      @id @default(autoincrement())
+  user_id1 Int
+  user_id2 Int
+  date     DateTime
+}
+
+model channel {
+  id      Int     @id @default(autoincrement())
+  name    String
+  deleted Boolean
+}
+
+model user_channel_relation { // DELETAVEL
+  id         Int @id @default(autoincrement())
+  user_id   Int
+  channel_id Int
+}
