@@ -2,6 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 // PARA GERAR UMA MIGRATION -> npx prisma migrate dev 
+// STUDIO -> npx prisma studio
 
 generator client {
   provider = "prisma-client-js"
